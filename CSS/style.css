@@ -1,0 +1,298 @@
+body,html{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    background-color: rgba(15, 76, 117, 0.979);
+
+}
+
+header{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    background-color: #1B262C;
+    border-bottom: azure solid;
+}
+
+header div{
+    color: azure;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 55px;
+}
+
+main{
+    background-color: rgba(15, 76, 117, 0.979);
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+.searchc{
+    display: flex;
+    background-color: #BBE1FA;
+    padding: 5px;
+    height: 50px;
+    width: auto;
+    margin: 5px;
+    margin-right: auto;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.searchc:hover{
+    box-shadow: 0 0 6px rgb(253, 253, 253)
+}
+
+.searchc input{
+    display: flex;
+    width: 650px;
+    height: 35px;
+    border: none;
+    background-color: #BBE1FA;
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(85, 79, 79);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.searchc input:focus{
+    outline: none;
+}
+
+.addc{
+    position: relative;
+    display: flex;
+    padding: 5px;
+    margin: 5px;
+    height: 60px;
+    width: 200px;
+    justify-content: center;
+    align-items:center ;
+}
+
+.addc button{
+    cursor: pointer;
+    border: honeydew solid;
+    width: 150px;
+    height: 55px;
+    border-radius: 8px;
+    background-color: #3282b8;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    box-shadow: 0 6px #999;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.addc button:hover{
+    background-color: #106fad;
+}
+
+.addc button:active{
+    background-color: #106fad;
+    box-shadow: 0 2px #666;
+    transform: translateY(4px);
+}
+
+.up{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px;
+    margin: 5px;
+}
+
+.container{
+    margin: 15px;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.book{
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: #1B262C;
+    height: 150px;
+    width: 330px;
+    padding: 10px;
+    margin: 10px;
+    font-family: 'Abril Fatface', cursive;
+    border: solid #bbe1fa;
+}
+
+.book:hover{
+  border: solid whitesmoke;
+}
+
+.title{
+    font-size: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    color: #bbe1fa;
+    text-decoration: underline solid #bbe1fa;
+    border-left: solid #bbe1fa ;
+    border-right : solid #bbe1fa ;
+    border-radius: 8px;
+}
+
+.apr div {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    margin: 9px;
+    color: #bbe1fa;
+}
+
+.delete{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid #bbe1fa 2px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.delete:hover{
+    color: rgb(97, 5, 24);
+    border: solid rgb(97, 5, 24) 2px;
+}
+
+
+
+.readla {
+    display: flex;
+    position: relative;
+    align-items: center;
+    cursor: pointer;
+  }
+
+.readla input {
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+.checkmark {
+    height: 25px;
+    width: 25px;
+    background-color: #dbe4eb;
+  }
+  
+.readla:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+.readla input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+.checkmark:after {
+    content: "";
+    display: none;
+  }
+  
+.readla input:checked ~ .checkmark:after {
+    display: block;
+    position: relative;
+  }
+  
+  .readla .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  .modal-content {
+    font-family: 'Abril Fatface', cursive;
+    background-color: #1d5377 ;
+    font-size: 20px;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 5px solid azure;
+    border-radius: 15px;
+    width: 500px;
+    height: 170px; /* Could be more or less, depending on screen size */
+  }
+
+  .modal-content div{
+    height: 30px;
+    align-items: center;
+    border-radius: 0;
+    border: none;
+    padding: 0px;
+    margin: 5px;
+    justify-content: flex-start;
+    text-decoration: none;
+    display: flex;
+    font-size: 20px;
+    color: rgb(240, 234, 234);
+    margin: 5px;
+  }
+
+  .modal-content div input[type='text']{
+    width: 185px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: 'Abril Fatface', cursive;
+
+  }
+
+  .modal-content .adder{
+    background-color: rgba(15, 76, 117, 0.979);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    border: solid rgb(248, 248, 248);
+  }
+
+  .modal-content .adder:hover{
+    background-color: rgb(15, 76, 117);
+    border-radius: 12px;
+    cursor: pointer;
+    border: solid rgb(96, 231, 137);
+    color: rgb(96, 231, 137);
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
